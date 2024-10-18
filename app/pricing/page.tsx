@@ -5,12 +5,10 @@ import {
     CardContent,
     CardDescription,
     CardFooter,
-    CardHeader,
     CardTitle,
-  } from "@/components/ui/card"
+} from "@/components/ui/card";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
 
 const Pricing = () => {
   return (
@@ -21,7 +19,7 @@ const Pricing = () => {
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">Pricing</h2>
             <p className="mt-2 text-gray-600">
-              Whether you're just looking for a clean cut or complete grooming care, I have you covered.
+              Whether you&apos;re just looking for a clean cut or complete grooming care, I have you covered.
             </p>
           </div>
 
