@@ -21,7 +21,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex items-center justify-center mx-auto mt-10 gap-4">
+        <div className="flex flex-row items-center justify-center mx-auto mt-10 gap-4">
+          <Link href={'/pricing'}>
+            <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 font-bold tracking-tighter">Prices</Button>
+          </Link>
           <Link href={'/book'}>
             <Button size="lg" className="bg-blue-700 font-bold tracking-tighter">Book Now</Button>
           </Link>
