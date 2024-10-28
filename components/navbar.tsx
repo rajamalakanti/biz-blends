@@ -26,9 +26,6 @@ const NavBar = () => {
           <Link href={'/'}>
             <Button className='mr-5' variant={'link'}>Home</Button>
           </Link>
-          <Link href={'/pricing'}>
-            <Button className='mr-5' variant={'link'}>Pricing</Button>
-          </Link>
           <Link href={'/book'}>
             <Button>Book Now</Button>
           </Link>
