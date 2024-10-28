@@ -41,9 +41,6 @@ const NavBar = () => {
           <Link href={'/'} className='w-full text-center mb-2'>
             <Button variant={'link'} onClick={toggleMenu}>Home</Button>
           </Link>
-          <Link href={'/pricing'} className='w-full text-center mb-2'>
-            <Button variant={'link'} onClick={toggleMenu}>Pricing</Button>
-          </Link>
           <Link href={'/book'} className='w-full text-center'>
             <Button onClick={toggleMenu}>Book Now</Button>
           </Link>
