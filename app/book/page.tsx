@@ -31,7 +31,7 @@ const CombinedPage = () => {
                 <CardContent>
                   <p className="text-4xl font-extrabold text-blue-700">$25</p>
                   <p className="text-sm text-gray-500 mt-2">Address: 739 Violet Circle, Naperville, IL, 60540</p>
-                  <p className='text-sm text-gray-500'>Days: Friday - Sunday</p>
+                  <p className='text-sm text-gray-500'>Days: Friday - Saturday</p>
                 </CardContent>
                 <CardDescription className="text-sm">
                   A clean, fresh haircut to keep you looking sharp.
@@ -44,7 +44,7 @@ const CombinedPage = () => {
                 <CardContent>
                   <p className="text-4xl font-extrabold text-blue-700">$35</p>
                   <p className="text-sm text-gray-500 mt-2">Address: 739 Violet Circle, Naperville, IL, 60540</p>
-                  <p className='text-sm text-gray-500'>Days: Friday - Sunday</p>
+                  <p className='text-sm text-gray-500'>Days: Friday - Saturday</p>
                 </CardContent>
                 <CardDescription className="text-sm">
                   Premium grooming with haircut and beard care.
