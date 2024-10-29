@@ -30,6 +30,8 @@ const CombinedPage = () => {
                 <CardTitle className="text-xl">Haircut</CardTitle>
                 <CardContent>
                   <p className="text-4xl font-extrabold text-blue-700">$30</p>
+                  <p className="text-sm text-gray-500 mt-2">Location: Main Salon</p>
+                  <p className="text-sm text-gray-500">Time: Check Calendar</p>
                 </CardContent>
                 <CardDescription className="text-sm">
                   A clean, fresh haircut to keep you looking sharp.
@@ -41,11 +43,28 @@ const CombinedPage = () => {
                 <CardTitle className="text-xl">Haircut + Beard Care</CardTitle>
                 <CardContent>
                   <p className="text-4xl font-extrabold text-blue-700">$35</p>
+                  <p className="text-sm text-gray-500 mt-2">Location: Main Salon</p>
+                  <p className="text-sm text-gray-500">Time: Check Calendar</p>
                 </CardContent>
                 <CardDescription className="text-sm">
                   Premium grooming with haircut and beard care.
                 </CardDescription>
               </Card>
+
+              {/* Haircut at School */}
+              <Card className="p-4 flex flex-col items-center">
+                <CardTitle className="text-xl">Haircut at Champions Barber and Beauty</CardTitle>
+                <CardContent>
+                  <p className="text-4xl font-extrabold text-blue-700">$20</p>
+                  <p className="text-sm text-gray-500 mt-2">Address: 4374 E New York St Aurora, IL 60504</p>
+                  <p className="text-sm text-gray-500">Time: 10:00 AM - 4:00 PM</p>
+                  <p className='text-sm text-gray-500'>Days: Monday - Thursday</p>
+                </CardContent>
+                <CardDescription className="text-sm">
+                  A clean, fresh haircut at a discounted price at the barber school.
+                </CardDescription>
+              </Card>
+              
             </div>
           </div>
         </div>
@@ -56,7 +75,7 @@ const CombinedPage = () => {
             <iframe
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0kGoH4C_qhaUb7QbcDpVjQm_XqndscWcPvM--WuT5mzkuVtMPJjWNIIvVSd6JSwOxxmDSemJwE?gv=true"
               width="100%"
-              height="450"  // Reduced height to fit without scrolling
+              height="450"
               className="rounded-lg"
             ></iframe>
           </div>
