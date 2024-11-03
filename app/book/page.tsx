@@ -4,8 +4,10 @@ import {
     Card,
     CardContent,
     CardDescription,
+    CardFooter,
     CardTitle,
 } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
 
 const CombinedPage = () => {
   return (
@@ -14,7 +16,7 @@ const CombinedPage = () => {
       <NavBar />
 
       {/* Main Content Area with responsive layout */}
-      <div className="flex-grow flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-gray-300">
+      <div className="flex-grow flex flex-row lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-gray-300">
         
         {/* Pricing Section */}
         <div className="flex-1 flex flex-col items-center justify-center bg-gray-50 p-4">
@@ -36,6 +38,9 @@ const CombinedPage = () => {
                 <CardDescription className="text-sm">
                   A clean, fresh haircut to keep you looking sharp.
                 </CardDescription>
+                <CardFooter>
+                  <Button>Book Now</Button>
+                </CardFooter>
               </Card>
 
               {/* Haircut + Beard Care Pricing Card */}
@@ -49,6 +54,9 @@ const CombinedPage = () => {
                 <CardDescription className="text-sm">
                   Premium grooming with haircut and beard care.
                 </CardDescription>
+                <CardFooter>
+                  <Button>Book Now</Button>
+                </CardFooter>
               </Card>
 
               {/* Haircut at School */}
@@ -62,21 +70,12 @@ const CombinedPage = () => {
                 <CardDescription className="text-sm">
                   Support my career by getting a quality cut at the barber school.
                 </CardDescription>
+                <CardFooter className='mt-4'>
+                  <Button>Book Now</Button>
+                </CardFooter>
               </Card>
               
             </div>
-          </div>
-        </div>
-
-        {/* Appointment Scheduling Section */}
-        <div className="flex-1 flex items-center justify-center bg-blue-700 p-4">
-          <div className="w-full max-w-lg bg-white shadow-lg rounded-lg overflow-hidden">
-            <iframe
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0kGoH4C_qhaUb7QbcDpVjQm_XqndscWcPvM--WuT5mzkuVtMPJjWNIIvVSd6JSwOxxmDSemJwE?gv=true"
-              width="100%"
-              height="700"
-              className="rounded-lg"
-            ></iframe>
           </div>
         </div>
       </div>
