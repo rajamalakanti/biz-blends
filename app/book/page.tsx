@@ -1,6 +1,9 @@
 import React from 'react';
 import NavBar from '@/components/navbar';
 import PricingCard from '@/components/pricingCard';
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { CircleCheckIcon } from 'lucide-react';
 
 const BookPage = () => {
   return (
@@ -23,13 +26,32 @@ const BookPage = () => {
           {/* Responsive Grid for Pricing Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Haircut Pricing Card */}
-            <PricingCard 
-              cut="Haircut" 
-              price="$25" 
-              address="739 Violet Circle, Naperville, IL, 60540" 
-              days="Friday - Saturday" 
-              description="A clean, fresh haircut to keep you looking sharp."
-            />
+                    <div className="flex flex-col rounded-lg border border-gray-200">
+        <div className="grid gap-4 p-6">
+          <h3 className="text-2xl font-bold">Haircut</h3>
+          <p className="text-sm leading-6 text-gray-500">A clean, fresh haircut to keep you looking sharp.</p>
+          <div className="text-4xl font-semibold text-blue-700">$25</div>
+          <div className="grid gap-2 text-sm">
+            <p className="flex items-center gap-2">
+              <CircleCheckIcon className="w-4 h-4" />
+              739 Violet Circle, Naperville, IL, 60540
+            </p>
+            <p className="flex items-center gap-2">
+              <CircleCheckIcon className="w-4 h-4" />
+              Friday - Saturday
+            </p>
+            <p className="flex items-center gap-2">
+              <CircleCheckIcon className="w-4 h-4" />
+              Please text or DM me when you arrive
+            </p>
+          </div>
+        </div>
+        <div className="p-4 border-t grid gap-2">
+          <Link href='/gcal'>
+          <Button className="bg-blue-700 w-full">Book Now</Button>
+          </Link>
+        </div>
+      </div>
 
             {/* Haircut + Beard Care Pricing Card */}
             <PricingCard 
@@ -41,13 +63,14 @@ const BookPage = () => {
             />
 
             {/* Haircut at School */}
+
             <PricingCard 
               cut="Haircut at Champions" 
               price="$25" 
-              address="4374 E New York St, Aurora, IL 60504" 
+              address="2011 S IL-59 Plainfield, IL, 60586" 
               days="Monday - Thursday" 
               description="Support my career by getting a cut at the barber school."
-            />
+            /> 
           </div>
         </div>
       </div>
