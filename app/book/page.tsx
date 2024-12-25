@@ -1,9 +1,6 @@
 import React from 'react';
 import NavBar from '@/components/navbar';
 import PricingCard from '@/components/pricingCard';
-import { Button } from "@/components/ui/button"
-import Link from "next/link";
-import { CircleCheckIcon } from 'lucide-react';
 
 const BookPage = () => {
   return (
