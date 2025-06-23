@@ -2,13 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import NavBar from '@/components/navbar'
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
-      <section className="flex flex-col items-center w-screen h-[calc(100vh-90px)] justify-center">
+      <section className="flex flex-col items-center w-screen p-20 justify-center">
         <div className="rounded-full border-4 border-blue-700 overflow-hidden w-48 h-48 mb-6">
           <Image src="/barber-biz.jpeg" width={400} height={400} alt="Profile" className="w-full h-full object-cover scale-155" />
         </div>

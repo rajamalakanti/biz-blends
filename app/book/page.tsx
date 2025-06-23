@@ -4,11 +4,6 @@ import PricingCard from '@/components/pricingCard';
 
 const BookPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Navbar at the top */}
-      <NavBar />
-
-      {/* Main Content Area */}
       <div className="flex-grow flex flex-col items-center py-6 px-4 sm:px-6 lg:px-8">
         
         {/* Pricing Section */}
@@ -37,9 +32,9 @@ const BookPage = () => {
             {/* Haircut Pricing Card */}
             <PricingCard 
               cut="Haircut" 
-              price="$25" 
+              price="$30" 
               address="Friday - Saturday" 
-              days="739 Violet Circle, Naperville, IL, 60540" 
+              days="4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="A clean, fresh haircut to keep you looking sharp."
               note="Please text or DM me upon arrival"
             />
@@ -49,13 +44,12 @@ const BookPage = () => {
               cut="Haircut + Beard Care" 
               price="$35" 
               address="Monday - Thursday: 2011 S IL-59 Plainfield, IL, 60586" 
-              days="Friday - Saturday: 739 Violet Circle, Naperville, IL, 60540" 
+              days="Friday - Saturday: 4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="Premium grooming with haircut and beard care."
             />
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -1,12 +1,9 @@
 import React from 'react'
-import NavBar from '@/components/navbar'
 
 const GCal = () => {
   return (
     <div>
-      <NavBar />
       <section className="flex flex-col items-center h-[calc(100vh-90px)] justify-center">
-
         {/* Iframe Container */}
         <div className="w-full max-w-[1280px] h-full overflow-hidden">
           <iframe
