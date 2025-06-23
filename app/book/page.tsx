@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '@/components/navbar';
 import PricingCard from '@/components/pricingCard';
 
 const BookPage = () => {
