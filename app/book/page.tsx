@@ -35,7 +35,7 @@ const BookPage = () => {
               address="Friday - Saturday" 
               days="4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="A clean, fresh haircut to keep you looking sharp."
-              note="Please text or DM me upon arrival"
+              note="Ask for Tim at the front desk"
             />
 
             {/* Haircut + Beard Care Pricing Card */}
