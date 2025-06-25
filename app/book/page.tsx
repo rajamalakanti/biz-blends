@@ -33,7 +33,7 @@ const BookPage = () => {
               cut="Haircut" 
               price="$30" 
               address="Friday - Saturday" 
-              days="4012 Fox Valley Center Dr, Aurora, IL 60504" 
+              days="Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="A clean, fresh haircut to keep you looking sharp."
               note="Ask for Tim at the front desk"
             />
@@ -43,7 +43,7 @@ const BookPage = () => {
               cut="Haircut + Beard Care" 
               price="$35" 
               address="Monday - Thursday: 2011 S IL-59 Plainfield, IL, 60586" 
-              days="Friday - Saturday: 4012 Fox Valley Center Dr, Aurora, IL 60504" 
+              days="Friday - Saturday: Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="Premium grooming with haircut and beard care."
             />
           </div>
