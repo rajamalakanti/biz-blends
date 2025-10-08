@@ -15,35 +15,23 @@ const BookPage = () => {
           <div className='h-6'/>
 
           {/* Responsive Grid for Pricing Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            {/* Haircut at School */}
-
-            <PricingCard 
-              cut="Haircut at Champions" 
-              price="$25" 
-              address="Monday - Thursday" 
-              days="2011 S IL-59 Plainfield, IL, 60586" 
-              description="Support my career by getting a cut at the barber school."
-              note ="Ask for Tim at the front desk"
-            /> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
             {/* Haircut Pricing Card */}
             <PricingCard 
               cut="Haircut" 
               price="$30" 
-              address="Friday - Saturday" 
+              address="Monday - Saturday" 
               days="Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="A clean, fresh haircut to keep you looking sharp."
-              note="Ask for Tim at the front desk"
             />
 
             {/* Haircut + Beard Care Pricing Card */}
             <PricingCard 
               cut="Haircut + Beard Care" 
               price="$35" 
-              address="Monday - Thursday: 2011 S IL-59 Plainfield, IL, 60586" 
-              days="Friday - Saturday: Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504" 
+              address="Monday - Saturday" 
+              days="Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504" 
               description="Premium grooming with haircut and beard care."
             />
           </div>
