@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Cormorant_Infant, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
-import BarberAnnouncement from "@/components/callout";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const cormorantInfant = Cormorant_Infant({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600", "700"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "BizBlends",
-  description: "Book with Biz",
+  title: "Effect Hair Studio",
+  description: "Book with Effect Hair Studio",
 };
 
 export default function RootLayout({
@@ -28,10 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cormorantInfant.variable} ${inter.variable} font-sans antialiased`}
       >
-        <BarberAnnouncement/>
-        <NavBar/>
+        <NavBar />
         {children}
       </body>
     </html>

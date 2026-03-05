@@ -12,34 +12,34 @@ const NavBar = () => {
   };
 
   return (
-    <div className='w-full top-0 left-0 bg-white border-b z-50'>
+    <div className='w-full top-0 left-0 bg-black/80 backdrop-blur-md border-b border-white/10 z-50 sticky'>
       <div className='max-w-[1280px] flex justify-between mx-auto items-center p-6'>
-        <h1 className='text-blue-700 text-2xl font-bold tracking-tighter'>BizBlends</h1>
-        
+        <h1 className='text-white text-2xl font-cormorant font-medium'>Effect Hair Studio.</h1>
+
         {/* Hamburger Icon for Mobile View */}
-        <div className="lg:hidden" onClick={toggleMenu}>
+        <div className="lg:hidden text-white cursor-pointer" onClick={toggleMenu}>
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </div>
 
         {/* Links for Desktop View */}
-        <div className='hidden lg:flex flex-row items-center justify-evenly'>
+        <div className='hidden lg:flex flex-row items-center justify-evenly gap-8'>
           <Link href={'/'}>
-            <Button className='mr-5' variant={'link'}>Home</Button>
+            <span className='text-sm text-zinc-400 hover:text-white transition-colors uppercase tracking-widest'>Home</span>
           </Link>
           <Link href={'/book'}>
-            <Button>Book Now</Button>
+            <Button variant="outline" className='border-white/20 text-white hover:bg-white hover:text-black transition-colors rounded-none uppercase tracking-widest text-xs px-8'>Book Now</Button>
           </Link>
         </div>
       </div>
 
       {/* Dropdown Menu for Mobile View */}
       {menuOpen && (
-        <div className='lg:hidden flex flex-col items-center bg-white py-4'>
-          <Link href={'/'} className='w-full text-center mb-2'>
-            <Button variant={'link'} onClick={toggleMenu}>Home</Button>
+        <div className='lg:hidden flex flex-col items-center bg-zinc-950 py-8 border-b border-white/10 gap-6'>
+          <Link href={'/'} className='w-full text-center' onClick={toggleMenu}>
+            <span className='text-sm text-zinc-400 hover:text-white transition-colors uppercase tracking-widest'>Home</span>
           </Link>
-          <Link href={'/book'} className='w-full text-center'>
-            <Button onClick={toggleMenu}>Book Now</Button>
+          <Link href={'/book'} className='w-full text-center' onClick={toggleMenu}>
+            <Button variant="outline" className='border-white/20 text-white hover:bg-white hover:text-black transition-colors rounded-none uppercase tracking-widest text-xs px-8'>Book Now</Button>
           </Link>
         </div>
       )}

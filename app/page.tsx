@@ -5,24 +5,43 @@ import { Button } from '@/components/ui/button'
 
 const Home = () => {
   return (
-    <div>
-      <section className="flex flex-col items-center w-screen p-20 justify-center">
-        <div className="rounded-full border-4 border-blue-700 overflow-hidden w-48 h-48 mb-6">
-          <Image src="/barber-biz.jpeg" width={400} height={400} alt="Profile" className="w-full h-full object-cover scale-155" />
-        </div>
+    <div className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white">
+      <section className="relative w-full max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between gap-16">
 
-        <div className="text-center">
-          <p className="text-blue-700 text-lg font-semibold mb-1">HEY THERE,</p>
-          <h1 className="text-4xl font-bold mb-4">I&apos;m Tim Medina (Biz).</h1>
-          <p className="text-gray-600 max-w-lg">
-            I&apos;m a barber based out of Naperville, IL. A cut with me is more than just a change to your hair. I want everyone&apos;s experience to be enjoyable, so I take pride in making my clients feel at home. I am always looking for opportunities to perfect my craft and pursue my passion!
+        {/* Content Side */}
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <p className="text-zinc-400 text-xs md:text-sm font-medium tracking-[0.2em] uppercase mb-6">
+            Master Barber • Naperville, IL
           </p>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-cormorant font-medium leading-none mb-6 tracking-tight">
+            Tim Medina
+          </h1>
+          <p className="text-zinc-300 max-w-md text-base md:text-lg leading-relaxed mb-10 font-light">
+            More than just a haircut. Experience a refined grooming session tailored to your style. I take pride in making my clients feel at home while delivering precision and professionalism.
+          </p>
+
+          <Link href={'/book'}>
+            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-none uppercase tracking-[0.15em] text-xs md:text-sm px-10 py-6 h-auto backdrop-blur-sm">
+              Book Appointment
+            </Button>
+          </Link>
         </div>
 
-        <div className="flex flex-row items-center justify-center mx-auto mt-10 gap-4">
-          <Link href={'/book'}>
-            <Button size="lg" className="bg-blue-700 font-bold tracking-tighter">Book Now</Button>
-          </Link>
+        {/* Image Side */}
+        <div className="flex-1 w-full max-w-xs md:max-w-md relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 fill-mode-both">
+          <div className="aspect-[4/5] relative rounded-t-full rounded-b-md overflow-hidden border border-white/10 shadow-2xl group">
+            <div className="absolute inset-0 bg-neutral-950/20 z-10 group-hover:bg-transparent transition-colors duration-700"></div>
+            <Image
+              src="/barber-biz.jpeg"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Tim Medina"
+              className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+            />
+          </div>
+          {/* Decorative Elements */}
+          <div className="absolute -z-10 top-6 -right-6 w-full h-full border border-zinc-800 rounded-t-full rounded-b-md hidden md:block"></div>
+          <div className="absolute -z-10 -bottom-6 -left-6 w-24 h-24 border-l border-b border-zinc-700 hidden md:block"></div>
         </div>
       </section>
     </div>
