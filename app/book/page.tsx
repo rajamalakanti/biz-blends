@@ -23,7 +23,7 @@ const BookPage = () => {
           {/* Haircut Pricing Card */}
           <PricingCard
             cut="Haircut"
-            price="$30"
+            price="$40"
             address="Monday - Saturday"
             days="Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504"
             description="A clean, fresh haircut to keep you looking sharp."
@@ -32,7 +32,7 @@ const BookPage = () => {
           {/* Haircut + Beard Care Pricing Card */}
           <PricingCard
             cut="Haircut + Beard Care"
-            price="$35"
+            price="$45"
             address="Monday - Saturday"
             days="Beauty Concepts - 4012 Fox Valley Center Dr, Aurora, IL 60504"
             description="Premium grooming with haircut and beard care."
