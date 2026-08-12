@@ -3,12 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-import PriceIncreaseModal from '@/components/PriceIncreaseModal'
-
 const Home = () => {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white">
-      <PriceIncreaseModal />
       <section className="relative w-full max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between gap-16">
 
         {/* Content Side */}
