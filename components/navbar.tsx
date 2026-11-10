@@ -12,38 +12,63 @@ const NavBar = () => {
   };
 
   return (
-    <div className='w-full top-0 left-0 bg-black/80 backdrop-blur-md border-b border-white/10 z-50 sticky'>
-      <div className='max-w-[1280px] flex justify-between mx-auto items-center p-6'>
-        <h1 className='text-white text-2xl font-cormorant font-medium'>Effect Hair Studio.</h1>
-
-        {/* Hamburger Icon for Mobile View */}
-        <div className="lg:hidden text-white cursor-pointer" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+    <header className='w-full top-0 left-0 sticky z-50 bg-cream/90 backdrop-blur-md border-b-2 border-espresso/20'>
+      <div className='max-w-[1280px] mx-auto grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-5'>
+        <div className='justify-self-start'>
+          <Link href={'/book'} className='hidden lg:inline-flex'>
+            <Button
+              variant="outline"
+              className='rounded-full border-espresso/50 bg-espresso text-cream hover:bg-cocoa hover:text-cream transition-colors uppercase tracking-[0.18em] text-[11px] px-7 h-10'
+            >
+              Book
+            </Button>
+          </Link>
         </div>
 
-        {/* Links for Desktop View */}
-        <div className='hidden lg:flex flex-row items-center justify-evenly gap-8'>
-          <Link href={'/'}>
-            <span className='text-sm text-zinc-400 hover:text-white transition-colors uppercase tracking-widest'>Home</span>
+        <Link href={'/'} className='justify-self-center text-center group'>
+          <span className='block text-espresso text-3xl md:text-4xl font-display font-medium tracking-tight leading-none group-hover:opacity-80 transition-opacity'>
+            Effect
+          </span>
+          <span className='block text-espresso/55 text-[10px] md:text-[11px] tracking-[0.28em] uppercase mt-1 font-light'>
+            Hair Studio
+          </span>
+        </Link>
+
+        <div className='justify-self-end flex items-center gap-4'>
+          <Link href={'/'} className='hidden lg:block'>
+            <span className='text-[11px] text-cocoa/70 hover:text-espresso transition-colors uppercase tracking-[0.2em]'>
+              Home
+            </span>
           </Link>
-          <Link href={'/book'}>
-            <Button variant="outline" className='border-white/20 text-white hover:bg-white hover:text-black transition-colors rounded-none uppercase tracking-widest text-xs px-8'>Book Now</Button>
-          </Link>
+          <button
+            type="button"
+            className="lg:hidden text-espresso cursor-pointer p-1"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+          </button>
         </div>
       </div>
 
-      {/* Dropdown Menu for Mobile View */}
       {menuOpen && (
-        <div className='lg:hidden flex flex-col items-center bg-zinc-950 py-8 border-b border-white/10 gap-6'>
+        <div className='lg:hidden flex flex-col items-center bg-cream-deep/90 py-8 border-b border-espresso/10 gap-6'>
           <Link href={'/'} className='w-full text-center' onClick={toggleMenu}>
-            <span className='text-sm text-zinc-400 hover:text-white transition-colors uppercase tracking-widest'>Home</span>
+            <span className='text-[11px] text-cocoa hover:text-espresso transition-colors uppercase tracking-[0.2em]'>
+              Home
+            </span>
           </Link>
           <Link href={'/book'} className='w-full text-center' onClick={toggleMenu}>
-            <Button variant="outline" className='border-white/20 text-white hover:bg-white hover:text-black transition-colors rounded-none uppercase tracking-widest text-xs px-8'>Book Now</Button>
+            <Button
+              variant="outline"
+              className='rounded-full border-espresso/50 bg-espresso text-cream hover:bg-cocoa hover:text-cream transition-colors uppercase tracking-[0.18em] text-[11px] px-8 h-10'
+            >
+              Book Now
+            </Button>
           </Link>
         </div>
       )}
-    </div>
+    </header>
   );
 };
 

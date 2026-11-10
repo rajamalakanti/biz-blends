@@ -3,30 +3,28 @@ import PricingCard from '@/components/pricingCard';
 
 const BookPage = () => {
   return (
-    <div className="flex-grow flex flex-col items-center py-20 px-4 sm:px-6 lg:px-8 bg-black min-h-screen text-white">
+    <div className="flex-grow flex flex-col items-center py-16 md:py-20 px-4 sm:px-6 lg:px-8 min-h-[calc(100vh-8rem)]">
 
-      {/* Pricing Section */}
-      <div className="pt-10 max-w-5xl w-full text-center space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        <p className="text-zinc-400 text-xs md:text-sm font-medium tracking-[0.2em] uppercase">
-          Services & Investment
+      <div className="pt-4 max-w-5xl w-full text-center space-y-6 animate-fade-rise">
+        <p className="text-espresso/60 font-display text-lg md:text-xl font-light tracking-wide">
+          Effect
         </p>
-        <h2 className="text-5xl sm:text-6xl font-medium font-cormorant tracking-tight">Pricing & Selection</h2>
-        <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          Experience a tailored grooming session. Choose from our standard clean cut, or opt for full bespoke grooming care.
+        <h2 className="text-5xl sm:text-6xl font-medium font-display tracking-tight text-espresso leading-none">
+          Pricing & Selection
+        </h2>
+        <p className="text-cocoa/70 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Choose a clean cut or full bespoke grooming — every session is tailored with care by Tim Medina.
         </p>
 
-        <div className="max-w-2xl mx-auto w-full border border-white/10 bg-zinc-900/50 px-6 py-3">
-          <p className="text-zinc-300 text-xs md:text-sm tracking-[0.1em] uppercase">
+        <div className="max-w-2xl mx-auto w-full rounded-full bg-espresso px-6 py-3 shadow-[0_12px_28px_-18px_rgba(36,22,18,0.7)]">
+          <p className="text-cream/90 text-[11px] md:text-xs tracking-[0.12em] uppercase">
             Please note: holiday cuts may include an additional fee
           </p>
         </div>
 
-        <div className='h-6' />
+        <div className='h-4' />
 
-        {/* Responsive Grid for Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-          {/* Haircut Pricing Card */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
           <PricingCard
             cut="Haircut"
             price="$40"
@@ -35,7 +33,6 @@ const BookPage = () => {
             description="A clean, fresh haircut to keep you looking sharp."
           />
 
-          {/* Haircut + Beard Care Pricing Card */}
           <PricingCard
             cut="Haircut + Beard Care"
             price="$45"

@@ -5,43 +5,64 @@ import { Button } from '@/components/ui/button'
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-zinc-800 selection:text-white">
-      <section className="relative w-full max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between gap-16">
+    <div className="min-h-[calc(100vh-8rem)] overflow-hidden">
+      <section className="relative w-full max-w-6xl mx-auto px-6 pt-12 pb-20 md:pt-16 md:pb-28 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
 
-        {/* Content Side */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <p className="text-zinc-400 text-xs md:text-sm font-medium tracking-[0.2em] uppercase mb-6">
-            Master Barber • Naperville, IL
-          </p>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-cormorant font-medium leading-none mb-6 tracking-tight">
-            Tim Medina
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10 animate-fade-rise">
+          <h1 className="text-7xl md:text-8xl lg:text-[9.5rem] font-display font-medium leading-[0.85] tracking-tight text-espresso mb-5">
+            Effect
           </h1>
-          <p className="text-zinc-300 max-w-md text-base md:text-lg leading-relaxed mb-10 font-light">
-            More than just a haircut. Experience a refined grooming session tailored to your style. I take pride in making my clients feel at home while delivering precision and professionalism.
+
+          <p className="text-espresso/70 font-display text-xl md:text-2xl font-light tracking-wide mb-3">
+            Tim Medina
+          </p>
+
+          <div className="flex items-center gap-3 mb-8 justify-center md:justify-start">
+            <span className="hidden md:block w-8 h-px bg-espresso/40" aria-hidden />
+            <p className="text-espresso/50 text-[11px] md:text-xs tracking-[0.22em] uppercase">
+              Master Barber · Naperville, IL
+            </p>
+          </div>
+
+          <p className="text-cocoa/80 max-w-md text-base md:text-lg leading-relaxed mb-10 font-light">
+            More than a haircut — a refined grooming session tailored to your style, with precision and care.
           </p>
 
           <Link href={'/book'}>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 rounded-none uppercase tracking-[0.15em] text-xs md:text-sm px-10 py-6 h-auto backdrop-blur-sm">
+            <Button
+              size="lg"
+              className="rounded-full bg-espresso text-cream hover:bg-cocoa transition-all duration-300 uppercase tracking-[0.18em] text-[11px] md:text-xs px-10 py-6 h-auto shadow-[0_16px_32px_-16px_rgba(36,22,18,0.65)]"
+            >
               Book Appointment
             </Button>
           </Link>
         </div>
 
-        {/* Image Side */}
-        <div className="flex-1 w-full max-w-xs md:max-w-md relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 fill-mode-both">
-          <div className="aspect-[4/5] relative rounded-t-full rounded-b-md overflow-hidden border border-white/10 shadow-2xl group">
-            <div className="absolute inset-0 bg-neutral-950/20 z-10 group-hover:bg-transparent transition-colors duration-700"></div>
+        <div className="flex-1 w-full max-w-sm md:max-w-md relative animate-draw-in [animation-delay:180ms]">
+          <div
+            className="absolute -inset-6 md:-inset-10 organic-blob bg-espresso -z-10 animate-float-soft"
+            aria-hidden
+          />
+          <div
+            className="absolute -inset-2 md:-inset-4 organic-blob-alt border border-cream/20 -z-0 pointer-events-none"
+            aria-hidden
+          />
+
+          <div className="relative aspect-[4/5] organic-blob overflow-hidden shadow-[0_30px_60px_-20px_rgba(36,22,18,0.45)]">
             <Image
               src="/barber-biz.jpeg"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              alt="Tim Medina"
-              className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+              alt="Tim Medina at Effect Hair Studio"
+              className="object-cover object-center"
+              priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/35 via-transparent to-espresso/10" />
           </div>
-          {/* Decorative Elements */}
-          <div className="absolute -z-10 top-6 -right-6 w-full h-full border border-zinc-800 rounded-t-full rounded-b-md hidden md:block"></div>
-          <div className="absolute -z-10 -bottom-6 -left-6 w-24 h-24 border-l border-b border-zinc-700 hidden md:block"></div>
+
+          <p className="mt-6 text-center font-display text-sm text-cocoa/60 tracking-wide">
+            Made by Effect
+          </p>
         </div>
       </section>
     </div>

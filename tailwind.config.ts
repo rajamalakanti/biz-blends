@@ -10,10 +10,19 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['var(--font-inter)', 'sans-serif'],
+				sans: ['var(--font-outfit)', 'sans-serif'],
+				display: ['var(--font-cormorant)', 'serif'],
 				cormorant: ['var(--font-cormorant)', 'serif'],
+				mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
 			},
 			colors: {
+				cream: 'hsl(var(--cream))',
+				'cream-deep': 'hsl(var(--cream-deep))',
+				espresso: 'hsl(var(--espresso))',
+				cocoa: 'hsl(var(--cocoa))',
+				clay: 'hsl(var(--clay))',
+				'clay-soft': 'hsl(var(--clay-soft))',
+				parchment: 'hsl(var(--parchment))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {

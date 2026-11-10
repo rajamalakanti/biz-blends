@@ -2,10 +2,12 @@
 
 export default function BarberAnnouncement() {
   return (
-    <div className="w-full bg-zinc-900 text-zinc-300 text-center py-3 px-4 border-b border-white/10 shadow-sm">
-      <p className="text-xs md:text-sm font-medium tracking-[0.1em] uppercase">
-        <span className="text-white mr-2">New Location</span> I&apos;m now full-time Monday–Saturday
-        at <strong className="text-white font-semibold">Beauty Concepts</strong> — 4012 Fox Valley Center Dr.
+    <div className="w-full bg-espresso text-cream/85 text-center py-2.5 px-4">
+      <p className="text-[11px] md:text-xs font-medium tracking-[0.12em] uppercase">
+        <span className="text-clay-soft mr-2">New Location</span>
+        Full-time Monday–Saturday at{' '}
+        <strong className="text-cream font-semibold">Beauty Concepts</strong>
+        {' '}— 4012 Fox Valley Center Dr.
       </p>
     </div>
   );
